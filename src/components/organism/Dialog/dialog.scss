@@ -1,0 +1,16 @@
+@import '../../../styles/variables';
+
+.messages-area {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+
+  &__no-messages-block {
+    margin: 0 auto;
+  }
+
+  & .message {
+    margin: 12px 0;
+  }
+}

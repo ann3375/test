@@ -1,0 +1,113 @@
+@import '../../../styles/variables';
+
+.auth-page {
+  &__main-container {
+    height: 1080px;
+    display: flex;
+  }
+
+  &__aside-form {
+    max-width: 716px;
+    min-width: 500px;
+    width: 100%;
+    background-color: $color-white;
+    z-index: 10;
+  }
+
+  &__aside-image {
+    max-width: 724px;
+    width: 100%;
+    background: $color-aliceblue url('../../../assets/images/loginPageFrame.svg');
+  }
+
+  &__header {
+    & .header {
+      &__logo {
+        margin-bottom: 16px;
+      }
+
+      &__text {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.aside-form {
+  &__login-inner {
+    padding-top: 256px;
+  }
+
+  &__signup-inner {
+    padding-top: 63px;
+  }
+}
+
+@media (max-width: $media-tablet-s) {
+  .auth-page {
+    &__main-container {
+      height: fit-content;
+      flex-direction: column;
+    }
+
+    &__aside-form {
+      min-width: 100%;
+
+      & .form-login,
+      .form-sign-up {
+        &__button {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &__aside-image {
+      height: 256px;
+      order: 0;
+      background: url('../../../assets/images/loginPageFrameMobile.svg') no-repeat 0 -70px;
+
+      background-size: cover;
+      border-radius: 0px 0px 16px 16px;
+    }
+
+    &__header {
+      & .header {
+        &__text {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  .aside-form {
+    &__login-inner {
+      position: absolute;
+      top: 123px;
+      padding: 0 14px 13px;
+      width: 100%;
+    }
+
+    &__signup-inner {
+      position: absolute;
+      top: 123px;
+      padding: 0 14px 13px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $media-mobile-m) {
+  .auth-page {
+    &__aside-form {
+      & .form-login {
+        &__text {
+          margin-bottom: 48px;
+        }
+      }
+    }
+
+    &__aside-image {
+      background: url('../../../assets/images/loginPageFrameMobile.svg') no-repeat 0 -60px;
+    }
+  }
+}

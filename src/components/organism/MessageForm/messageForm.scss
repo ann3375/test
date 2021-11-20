@@ -1,0 +1,119 @@
+@import '../../../styles/variables';
+
+.message-form {
+  position: relative;
+
+  &__inner {
+    background: $color-white;
+    height: 80px;
+  }
+
+  &__preview-button {
+    position: absolute;
+    left: 20px;
+    top: 0%;
+    width: 40px;
+    height: 40px;
+    background: $color-white;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    opacity: 0;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    overflow: hidden;
+
+    &_active {
+      opacity: 1;
+      top: -60%;
+      overflow: auto;
+      visibility: inherit;
+    }
+  }
+
+  &__button {
+    padding: 15px;
+    z-index: 10;
+    border-radius: 0;
+  }
+
+  &__preview-block {
+    position: absolute;
+    bottom: 100%;
+  }
+  &__file-input {
+    background: $color-white;
+    z-index: 10;
+  }
+
+  & .form-field {
+    max-width: 100%;
+    width: 100%;
+    height: inherit;
+
+    &__inner {
+      height: 100%;
+    }
+
+    & label {
+      display: none;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    background: $color-white;
+    border-radius: 20px 0px 0px 0px;
+    padding: 15px;
+    transition: all 0.5s ease;
+    opacity: 0;
+
+    height: auto;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+    &_active {
+      visibility: inherit;
+      max-height: 100px;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: $media-tablet-s) {
+  .message-form {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+
+    &__inner {
+      height: 48px;
+    }
+
+    &__preview-button {
+      &_active {
+        top: -100%;
+      }
+    }
+
+    & .file-input {
+      &__label {
+        height: 48px;
+        width: 48px;
+      }
+
+      &__icon {
+        width: 16px;
+        height: 17px;
+      }
+    }
+
+    &__button {
+      width: 48px;
+      height: 48px;
+      padding: 15px;
+    }
+  }
+}

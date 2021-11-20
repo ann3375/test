@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+
+.logo {
+  &_size {
+    &_large {
+      width: 112px;
+      height: 43px;
+    }
+
+    &_medium {
+      width: 86px;
+      height: 33px;
+    }
+  }
+}
+
+@media (max-width: $media-tablet-s) {
+  .logo {
+    &_size {
+      &_large {
+        width: 84px;
+        height: 32px;
+      }
+
+      &_medium {
+        width: 63px;
+        height: 22px;
+      }
+    }
+  }
+}

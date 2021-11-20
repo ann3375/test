@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+
+.file-input {
+  &__label {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_error {
+      position: absolute;
+      bottom: 100%;
+      left: 10px;
+      max-width: 250px;
+      word-wrap: break-word;
+    }
+
+    &:hover path {
+      color: $color-blue;
+    }
+  }
+
+  &__icon path {
+    color: $color-easyGrey;
+    transition: all 0.5s ease;
+  }
+
+  & input[type='file'] {
+    display: none;
+  }
+}

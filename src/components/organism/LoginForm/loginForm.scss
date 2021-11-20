@@ -1,0 +1,72 @@
+@import '../../../styles/variables';
+
+.form-login {
+  max-width: 354px;
+
+  &__input {
+    margin-bottom: 32px;
+  }
+
+  & input {
+    padding: 16px 40px 16px 16px;
+    height: 56px;
+  }
+
+  &__buttons {
+    margin-top: 48px;
+  }
+
+  &__text {
+    margin-bottom: 48px;
+  }
+
+  &__buttons {
+    justify-content: space-between;
+  }
+
+  &__security-code {
+    justify-content: space-between;
+    align-items: flex-end;
+
+    & .form-login__input {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $media-tablet-s) {
+  .form-login {
+    max-width: 100%;
+
+    &__input {
+      margin-bottom: 24px;
+    }
+
+    & input {
+      padding: 12px 40px 12px 16px;
+      height: 48px;
+    }
+
+    &__buttons {
+      margin-top: 40px;
+      flex-direction: column;
+    }
+
+    &__button:first-child {
+      margin-bottom: 8px;
+    }
+
+    &__security-code {
+      & .form-login__input {
+        max-width: 171px;
+        margin-right: 2px;
+      }
+    }
+  }
+}
+
+@media (max-width: $media-mobile-m) {
+  .form-login {
+    max-width: 354px;
+  }
+}

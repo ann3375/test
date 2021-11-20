@@ -1,0 +1,75 @@
+@import '../../../styles/variables';
+
+.message {
+  border: 1px solid $color-powderblue;
+  border-radius: 12px 0 12px 12px;
+  padding: 12px;
+  position: relative;
+  max-width: 503px;
+  width: fit-content;
+  background: $color-lightBlue;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+
+  &::before,
+  &::after {
+    border: 12px solid transparent;
+    border-top: 12px solid $color-powderblue;
+    content: '';
+    position: absolute;
+  }
+
+  &__text {
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+  }
+
+  &__file-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  &_side {
+    &_left {
+      border-radius: 0px 12px 12px 12px;
+      background: $color-white;
+      align-items: flex-start;
+
+      &::before,
+      &::after {
+        left: -13px;
+        top: -1px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -11px;
+        top: 0px;
+        border: 12px solid transparent;
+        border-top: 12px solid $color-white;
+      }
+    }
+
+    &_right {
+      align-items: flex-end;
+      align-self: flex-end;
+
+      &::before,
+      &::after {
+        right: -13px;
+        top: -1px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: -11px;
+        top: 0px;
+        border: 12px solid transparent;
+        border-top: 12px solid $color-lightBlue;
+      }
+    }
+  }
+}

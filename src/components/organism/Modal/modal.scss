@@ -1,0 +1,54 @@
+@import '../../../styles/variables';
+
+.modal {
+  background: rgba($color: $color-black, $alpha: 0.5);
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  z-index: 20;
+
+  &__wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    background: $color-white;
+    border: 1px solid $color-mediumBlue;
+    border-radius: 12px;
+    transform: translate((-50%, -50%));
+  }
+
+  &__header-text {
+    text-align: center;
+  }
+
+  &__info-text {
+    margin-top: 20px;
+  }
+
+  &__error-text {
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  &__button {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: $media-tablet-s) {
+  .modal {
+    &__wrapper {
+      width: calc(100vw - 20px);
+    }
+
+    &__button {
+      width: 100%;
+    }
+  }
+}

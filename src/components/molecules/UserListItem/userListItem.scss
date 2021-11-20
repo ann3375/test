@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+
+.user-list {
+  &__link {
+    max-width: 295px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover,
+    &_active {
+      background: $color-cornflowerblue;
+
+      & .typography {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.link {
+  &__avatar {
+    margin-right: 12px;
+  }
+
+  &__username,
+  &__last-message {
+    max-width: 235px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__info {
+    height: 39px;
+  }
+
+  &__username {
+    margin-bottom: 4px;
+  }
+
+  &__last-message {
+    color: $color-grey;
+  }
+}

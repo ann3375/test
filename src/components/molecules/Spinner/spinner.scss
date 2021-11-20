@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 8px $color-whitesmoke;
+  background: $color-ghostwhite;
+  padding: 12px;
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,61 @@
+@import '../../../styles/variables';
+
+.user-list {
+  padding-top: 20px;
+  width: 362px;
+  overflow: auto;
+  border-right: 1px solid $color-skyblue;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    max-width: 100%;
+    padding: 12px 24px;
+  }
+
+  &__no-user-block {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 46%;
+    left: 50%;
+  }
+
+  &__spinner {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: $media-tablet) {
+  .user-list {
+    padding-top: 0;
+    position: absolute;
+    width: 362px;
+    height: 0;
+    transition: all 0.5s ease;
+    z-index: 10;
+    background: $color-white;
+
+    &_active {
+      width: 362px;
+      height: calc(100% - 80px);
+    }
+  }
+}
+
+@media (max-width: $media-tablet-s) {
+  .user-list {
+    width: 100%;
+    height: calc(100% - 64px);
+    background: $color-white;
+    padding-top: 20px;
+
+    &__link {
+      padding: 12px 14px;
+    }
+  }
+}

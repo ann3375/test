@@ -1,0 +1,19 @@
+.wrapper {
+  &_flex {
+    display: flex;
+
+    &_row {
+      flex-direction: row;
+    }
+
+    &_column {
+      flex-direction: column;
+    }
+
+    &_align {
+      &_center {
+        align-items: center;
+      }
+    }
+  }
+}

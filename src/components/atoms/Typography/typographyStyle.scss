@@ -1,0 +1,101 @@
+@import './../../../styles/variables';
+
+.typography {
+  color: $color-black;
+  font-family: inherit;
+
+  &_variant {
+    &_h1 {
+      font-size: 42px;
+      line-height: 51px;
+      font-family: 'MontserratExtraBold', sans-serif;
+    }
+
+    &_h2 {
+      font-size: 27px;
+      line-height: 33px;
+      font-family: 'MontserratBold', sans-serif;
+    }
+
+    &_h3 {
+      font-size: 20px;
+      line-height: 24px;
+      font-family: 'MontserratBold', sans-serif;
+    }
+
+    &_h4 {
+      font-size: 15px;
+      line-height: 18px;
+      font-family: 'MontserratBold', sans-serif;
+    }
+
+    &_p1 {
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'MontserratMedium', sans-serif;
+    }
+
+    &_p2 {
+      font-size: 14px;
+      line-height: 17px;
+      font-family: 'MontserratMedium', sans-serif;
+    }
+
+    &_p3 {
+      font-size: 15px;
+      line-height: 23px;
+      font-family: 'MontserratRegular', sans-serif;
+    }
+  }
+
+  &_color {
+    &_cornflowerblue {
+      color: $color-cornflowerblue;
+    }
+
+    &_mediumBlue {
+      color: $color-mediumBlue;
+    }
+
+    &_darkgrey {
+      color: $color-mediumGrey;
+    }
+  }
+}
+
+@media (max-width: $media-mobile-m) {
+  .typography {
+    &_variant {
+      &_h1 {
+        font-size: 27px;
+        line-height: 33px;
+      }
+
+      &_h2 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &_h3 {
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+      &_h4 {
+        font-size: 13px;
+        line-height: 16px;
+      }
+
+      &_p1 {
+        font-size: 14px;
+        line-height: 17px;
+        font-family: 'MontserratRegular', sans-serif;
+      }
+
+      &_p2 {
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+  }
+}

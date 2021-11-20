@@ -1,0 +1,27 @@
+@import './variables';
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 $color-start-animation;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px $color-end-animation;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 $color-end-animation;
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 $color-start-animation;
+    box-shadow: 0 0 0 0 $color-start-animation;
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 7px $color-end-animation;
+    box-shadow: 0 0 0 7px $color-end-animation;
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 $color-end-animation;
+    box-shadow: 0 0 0 0 $color-end-animation;
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../../styles/variables';
+
+.status-bar {
+  background: $color-white;
+  padding: 23px;
+
+  &__user-status {
+    margin-left: 24px;
+  }
+
+  &__user-list-icon {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+  }
+
+  &__back-icon {
+    padding: 0;
+    height: 100%;
+    width: 16px;
+    display: none;
+  }
+}
+
+@media (max-width: $media-tablet) {
+  .status-bar {
+    &__user-list-icon {
+      display: flex;
+      transform: translateX(0);
+      animation: pulse 2s infinite;
+      transition: none;
+
+      &_transform {
+        transform: translate(330px, -30px);
+        animation: none;
+        transition: transform 0.5s ease;
+        background: transparent;
+      }
+    }
+  }
+}
+
+@media (max-width: $media-tablet-s) {
+  .status-bar {
+    height: 72px;
+    padding: 16px 14px;
+
+    &__user-status {
+      margin-left: 24px;
+    }
+
+    &__user-list-icon {
+      display: none;
+    }
+
+    &__back-icon {
+      display: block;
+    }
+  }
+}

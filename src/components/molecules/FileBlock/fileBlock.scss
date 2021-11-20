@@ -1,0 +1,56 @@
+@import '../../../styles/variables';
+
+.file-block {
+  height: fit-content;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+
+  &__info {
+    overflow-wrap: anywhere;
+    min-height: 25px;
+  }
+
+  &__filename {
+    font-weight: 600;
+  }
+
+  &__size {
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    cursor: pointer;
+  }
+
+  &__video {
+    max-width: 100%;
+    height: auto;
+    width: fit-content;
+    max-height: 400px;
+  }
+
+  &__spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+
+  &__audio::-webkit-media-controls-panel {
+    background: $color-lightBlue;
+  }
+}
+
+@media (max-width: $media-tablet-s) {
+  .file-block {
+    &__audio {
+      width: 250px;
+    }
+  }
+}

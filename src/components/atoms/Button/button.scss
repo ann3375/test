@@ -1,0 +1,95 @@
+@import '../../../styles/variables';
+
+.button {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+
+  &_variant {
+    &_primary {
+      color: $color-white;
+      background: $color-cornflowerblue;
+
+      &:hover {
+        background: $color-royalblue;
+      }
+
+      &:active {
+        background: $color-darkBlue;
+      }
+    }
+
+    &_outline {
+      color: $color-cornflowerblue;
+      background: inherit;
+      border: 1px solid $color-cornflowerblue;
+
+      &:hover {
+        color: $color-darkBlue;
+        border: 1px solid $color-darkBlue;
+      }
+    }
+
+    &_notification {
+      border: 1px solid $color-cornflowerblue;
+      width: 339px;
+      height: 56px;
+      border-radius: 32px;
+      background: $color-ghostwhite;
+      animation: pulse 2s infinite;
+    }
+
+    &_icon {
+      &.button:disabled {
+        background: inherit;
+        & svg {
+          color: $color-lightGrey;
+        }
+      }
+    }
+  }
+
+  &_size {
+    &_medium {
+      max-width: 171px;
+    }
+
+    &_large {
+      max-width: 347px;
+    }
+
+    &_small {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &:disabled {
+    cursor: auto;
+    background: $color-lightGrey;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+@media (max-width: $media-mobile-m) {
+  .button {
+    &_size {
+      &_small {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+}
